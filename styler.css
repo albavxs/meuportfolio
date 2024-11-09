@@ -6,35 +6,25 @@
 }
 
 body {
-    background: linear-gradient(to right, black, #8907da);
-  height: 100vh;
+  background: linear-gradient(to right, white, #4EC5F1);
+  min-height: 100vh;  /* Use min-height para garantir que o gradiente cubra toda a altura */
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: italic;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;  /* Define a cor do texto padrão para branco */
 }
 
 h2.titulo {
-  color: #fff;
+
   font-size: 40px;
 }
 
-/* Logo */
-.logo {
-  color: #e6e4e9; /* Cor principal da logo */
-  max-width: 600px;
-  margin: 1%;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-  cursor: pointer;
-  /* Efeito neon */
-  text-shadow: 0 0 5px #7038e9, 0 0 10px #a57bff, 0 0 15px #a57bff, 0 0 20px #000000,
-    0 0 30px #000000, 0 0 40px #7a4ded, 0 0 50px #6d48c9;
-}
 
 .top-bar {
-  position: relative;
-  top: 0;
   width: 100%;
   z-index: 1000;
   padding: 15px;
@@ -42,41 +32,37 @@ h2.titulo {
 
 .menu-desktop ul {
   list-style: none;
-  margin-left: 28%;
-  justify-content: space-around;
+  display: flex;
+  justify-content: center;  /* Centraliza os itens do menu */
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
 
 .menu-desktop ul li {
-  display: inline;
+  margin: 0 10px;
 }
 
 .menu-desktop ul li a {
   text-decoration: none;
-  color: rgba(179, 177, 177, 0.645);
+  color: #20272F;
   font-size: 18px;
   padding: 10px 20px;
   transition: background-color 0.3s;
 }
 
 .menu-desktop ul li a:hover {
-  color: rgb(255, 252, 252);
+  color: grey;
   border-radius: 5px;
 }
 
 /* Contêiner do texto e da imagem */
 .topo-do-site {
   display: flex;
-  margin-top: 1%;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-left: 150px;
-  font-size: 120%;
-  max-width: 120%;
-  box-sizing: border-box;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
 .bt-contato button {
@@ -85,81 +71,59 @@ h2.titulo {
   margin-top: 3%;
   font-size: 18px;
   font-weight: 600;
-  background-color: #7a4cff;
+  background-color: #20272F;;
   border: 0;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 0 5px #a57bff, 0 0 30px #7a4cff, 0 0 50px #4b2a9d;
+
   filter: brightness(1);
 }
 
 .bt-contato button:hover {
-  box-shadow: 0px 0px 8px #b056ff;
   transform: scale(1.05);
-  box-shadow: 0 0 5px #a57bff, 0 0 30px #7a4cff, 0 0 50px #4b2a9d, 0 0 40px #7a4ded;
   filter: brightness(1.2);
 }
 
 /* Posicionamento da imagem */
 .img-topo-site {
   max-width: 40%;
-  margin-left: -20%;
-  flex-shrink: 0;
+  margin-bottom: 20px;
 }
 
 .topo-do-site h1 {
-  font-size: 159%;
+  font-size: 2.5em;
 }
 
 .topo-do-site h1 span {
-  color: rgb(149, 39, 223);
+  color: #4EC5F1;
   font-size: 35px;
 }
 
 .topo-do-site .txt-topo-site p {
-  color: #fff;
-  margin: 40px 0px;
+  color: #000;
+  margin: 20px 0;
 }
 
 .img-topo-site img {
-  max-width: 80%;
+  width: 80%;
+  position relative;
+  margin-left: 80%;
   height: auto;
-  margin-left: 370%;
-  margin-top: -100vh;
+  border-radius: 50px;
   
-  border-radius: 140px;
-  object-fit: cover;
-  flex-shrink: 0;
-  box-shadow: 0 0 5px #a57bff, 0 0 10px #a57bff, 0 0 15px #a57bff, 0 0 20px #7a4cff, 
-    0 0 30px #7a4cff, 0 0 40px #4b2a9d, 0 0 50px #b666f4;
-  filter: brightness(1.2);
+ 
 }
 
 .img-topo-site img:hover {
   cursor: pointer;
-  box-shadow: 0 0 5px #a57bff, 0 0 10px #a57bff, 0 0 15px #a57bff, 0 0 20px #7a4cff,
-    0 0 30px #992dfe, 0 0 40px #712cd3, 0 0 50px #ae45ff;
-  filter: brightness(1.2);
-}
-.img-topo-site2 img {
-  padding: 22px;
-  margin-top: -450px;
-  border-radius: 140px;
-  max-width: 80%;
-  margin-left: 110%;
+ 
 }
 
 /* Ajustes para telas menores */
-@media (max-width: 768px) {
+@media and screen (max-width: 1200px) {
   .topo-do-site {
     flex-direction: column;
     align-items: center;
-  }
-
-  .img-topo-site {
-    margin-top: 10px;
-    margin-left: 0;
-    text-align: center;
   }
 
   .img-topo-site img {
@@ -174,27 +138,14 @@ h2.titulo {
 
 /* Cabeçalho */
 header {
-  padding: 40px 4%;
-}
-
-header > .interface {
+  width: 100%;
+  padding: 20px 4%;
   display: flex;
-  align-items: left;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 header a {
   color: #fff;
-}
-
-.topo-do-site .img-topo-site img {
-  position: relative;
-  animation: flutuar 2s ease-in-out infinite alternate;
-}
-
-.js {
-
-  width: 100px; height: 100px;"
 }
 
 @keyframes flutuar {
@@ -208,91 +159,49 @@ header a {
 }
 
 /* ESPECIALIDADES */
-
-/* Ajusta o contêiner de texto para centralizar e limitar largura */
 .interface2 {
-  color: #fff;
+  color: #20272F;
   max-width: 700px;
   margin: 4%;
   z-index: 1;
+  
 }
   
- object object {
-    cursor: pointer;
- }
+.jslogo,
+.htmllogo,
+.logocss,
+.logoreact,
+.nodelogo,
+.javalogo,
+.gitlogo,
+.pylogo,
+.typelogo {
+  cursor: pointer;
+  width: 8%; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção */
+  margin: 10px;
+}
 
- .jslogo {
-    width: 8%; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção */
-
-  }
-  
-  .htmllogo {
-     width: 12%; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção */
-  }
-  .logocss {
-     width: 12%; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção */
-    
-  }
-
-  .logoreact {
-     width: 12%; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção */
-    
-  }
-  .nodelogo {
-     width: 12%; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção */
-   
-  }
-  .javalogo {
-     width: 12%; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção */
-    
-  }
-  .gitlogo {
-     width: 12%; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção */
-    
-  }
-  .pylogo {
-     width: 12%; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção */
-    
-  }
-
-  .typelogo {
-     width: 12%; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção */
-    
-  }
-  
-
-   .especialidades {
-    padding: 20px;
-    margin-top: 20px;
-   
-  }
+.especialidades {
+  padding: 20px;
+  margin-top: 20px;
+}
 
 .especialidades-box {
   margin: 20px;
   display: inline-block;
   width: 250px;
-
   text-align: center;
-  color: #fff;
+ 
 }
-  .minhasespecialidades {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 12px;
-   
-  }
 
+.minhasespecialidades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
 
 section.especialidades {
   text-align: center;
@@ -312,9 +221,6 @@ section.especialidades {
 }
 
 /* Ajustar as imagens das divs de projetos */
-
-
-./* Flexbox Layout Geral */
 .interface2 {
   display: flex;
   flex-direction: column;
@@ -325,17 +231,17 @@ section.especialidades {
 .projeto1, .projeto2, .projeto3 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-right:-555px;
-  text-align: left; /* Alinha texto à esquerda */
+  align-items: center;  /* Centraliza os itens */
+  text-align: left;  /* Alinha o texto à esquerda */
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .projeto1 img, .projeto2 img, .projeto3 img {
   width: 80%;
   height: auto;
   margin-bottom: 20px;
-   border-radius: 14px;
+  border-radius: 14px;
 }
 
 .projeto1 p, .projeto2 p, .projeto3 p {
@@ -344,22 +250,21 @@ section.especialidades {
 }
 
 .projeto1 button, .projeto2 button, .projeto3 button {
-  align-self: flex-start; /* Alinha botões à esquerda */
-  color: #fff;
+  color: #eee;
   padding: 8px 20px;
   font-size: 14px;
   font-weight: 600;
-  background-color: #7a4cff;
+  background-color: #20272F;
   border: 0;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 0 5px #a57bff, 0 0 30px #7a4cff, 0 0 50px #4b2a9d;
   filter: brightness(1);
   margin-top: 10px;
+  align-self: flex-start;  /* Alinha botões à esquerda */
 }
 
 .projeto1 button:hover, .projeto2 button:hover, .projeto3 button:hover {
-  box-shadow: 0 0 8px #b056ff;
+
   transform: scale(1.05);
   filter: brightness(1.2);
 }
