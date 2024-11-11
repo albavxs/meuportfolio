@@ -15,8 +15,59 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #000;  /* Define a cor do texto padrão para branco */
+  transition: background-color 0.3s, background 0.3s;
 }
+
+.trilho {
+  width: 40px;
+  height: 20px;
+  margin-top: 5px;
+  background-color: #20272F;
+  margin-left: -65px;
+  border-radius: 150px;
+  position: relative;
+  cursor: pointer;
+}
+
+.trilho .indicador {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #eee;
+    transform: scale(.9);
+    position: absolute;
+}
+
+.trilho.light {
+  background-color: #eee;
+}
+
+.trilho.light .indicador{
+  left: 20px;
+  background-color: #20272F;
+
+}
+body.light {
+  background: linear-gradient(to right, #20272F, hsl(228, 83%, 16%)); /* Gradiente para o tema escuro */
+}
+body.light h1 {
+  color: #eee;
+}
+body.light h2 {
+  color: #eee;
+}
+
+
+body.light p {
+  color: #eee;
+}
+body.light  button {
+  color: #20272F;
+  background-color: #eee;
+}
+
+
+
 
 h2.titulo {
 
@@ -34,6 +85,7 @@ button {
   border: none; /* Remove a borda */
   padding: 0; /* Remove o preenchimento interno */
   cursor: pointer; /* Muda o cursor para indicar que é clicável */
+
 }
 
 button img {
@@ -171,7 +223,6 @@ header a {
 
 /* ESPECIALIDADES */
 .interface2 {
-  color: #20272F;
   max-width: 700px;
   margin: 4%;
   z-index: 1;
