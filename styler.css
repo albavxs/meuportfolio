@@ -61,12 +61,15 @@ body.light h2 {
 body.light p {
   color: #eee;
 }
-body.light  button {
+body.light  button{
   color: #20272F;
   background-color: #eee;
 }
 
 
+body.light h4 {
+   color: #eee;
+}
 
 
 h2.titulo {
@@ -80,19 +83,8 @@ h2.titulo {
   gap: 10px; /* Espaçamento entre os botões */
 }
 
-button {
-  background: none; /* Remove o fundo do botão */
-  border: none; /* Remove a borda */
-  padding: 0; /* Remove o preenchimento interno */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
 
-}
 
-button img {
-  display: block;
-  width: 24px; /* Ajuste o tamanho conforme necessário */
-  height: auto;
-}
 .menu-desktop ul {
   list-style: none;
   display: flex;
@@ -197,9 +189,12 @@ button img {
 
   .interface2 {
     text-align: center;
+    flex-direction:column;
     margin: 0 auto;
   }
 }
+
+
 
 /* Cabeçalho */
 header {
@@ -225,7 +220,9 @@ header a {
 }
 
 /* ESPECIALIDADES */
-.interface2 {
+.interface1 {
+  display: flex;
+  flex-direction: column;
   max-width: 700px;
   margin: 4%;
   z-index: 1;
@@ -262,11 +259,17 @@ header a {
 
 .minhasespecialidades {
   display: flex;
+  max-width: 700px;
+  margin: 4%;
+  z-index: 1;
+  padding: 20px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
 }
+
+
 
 section.especialidades {
   text-align: center;
@@ -280,21 +283,27 @@ section.especialidades {
 }
 
 .especialidades-box h3 {
-  font-size: 22px;
+  font-size: 20px;
   color: #fff;
   margin-top: 10px;
 }
 
+.proj {
+  margin-bottom: -2%;
+}
 /* Ajustar as imagens das divs de projetos */
 .interface2 {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 700px;
+  margin: 4%;
+  z-index: 1;
   padding: 20px;
 }
-
 .projeto1, .projeto2, .projeto3 {
   display: flex;
+  justify-content: spacebetwen;
+  margin: 15px;
+  border-radius: 5px;
   flex-direction: column;
   align-items: center;  /* Centraliza os itens */
   text-align: left;  /* Alinha o texto à esquerda */
@@ -303,21 +312,48 @@ section.especialidades {
 }
 
 .projeto1 img, .projeto2 img, .projeto3 img {
-  width: 80%;
+  width: 110px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 14px;
+}
+.projeto1:hover, .projeto2:hover, .projeto3:hover {
+  width: 100%;
   height: auto;
   margin-bottom: 20px;
   border-radius: 14px;
 }
 
-.projeto1 p, .projeto2 p, .projeto3 p {
+.oculto {
   margin-bottom: 20px;
   padding: 0 10px;
+  display: none;
 }
 
-.projeto1 button, .projeto2 button, .projeto3 button {
+.ocultar {
+  display: none;
+}
+
+.expande {
+  
+  display:block;
+ 
+}
+
+   .vejabutt {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color:  #20272F;
+   }
+
+
+
+
+ .gitbut{
   color: #eee;
-  padding: 8px 20px;
-  font-size: 14px;
+  padding: 8px 15px;
+  font-size: 60%;
   font-weight: 600;
   background-color: #20272F;
   border: 0;
@@ -328,7 +364,36 @@ section.especialidades {
   align-self: flex-start;  /* Alinha botões à esquerda */
 }
 
-.projeto1 button:hover, .projeto2 button:hover, .projeto3 button:hover {
+
+ .gitbut:hover {
+
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+
+body.light .vejabutt {
+   color: #eee;
+   border: 0;
+   background: none;
+}
+
+ .gitbut.light{
+  color: #eee;
+  padding: 8px 15px;
+  font-size: 70%;
+  font-weight: 600;
+  background-color: #20272F;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  filter: brightness(1);
+  margin-top: 10px;
+  align-self: flex-start;  /* Alinha botões à esquerda */
+}
+
+
+ .gitbut:hover.light {
 
   transform: scale(1.05);
   filter: brightness(1.2);
