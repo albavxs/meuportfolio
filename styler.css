@@ -1,4 +1,4 @@
-/* ESTILO GERAL */
+/* ESTILO GERAL */http://127.0.0.1:3000/index.html
 * {
   margin: 0;
   padding: 0;
@@ -23,11 +23,13 @@ body {
 .trilho {
   width: 40px;
   height: 20px;
-  margin-top: 5px;
+  margin-top: 15%;
   background-color: #20272F;
-  margin-left: -5%;
   border-radius: 150px;
+  margin-left: -3%;
   position: relative;
+  justify-content: center;
+  
   cursor: pointer;
 }
 
@@ -49,6 +51,10 @@ body {
   background-color: #20272F;
 
 }
+
+.dev {
+  margin-top: -35px;
+}
 body.light {
   background: linear-gradient(to right, #20272F, hsl(228, 83%, 16%)); /* Gradiente para o tema escuro */
 }
@@ -58,7 +64,9 @@ body.light h1 {
 body.light h2 {
   color: #eee;
 }
-
+body.light h5 {
+  color: #eee;
+}
 
 body.light p {
   color: #eee;
@@ -74,9 +82,10 @@ body.light h4 {
 }
 
 
+
 h2.titulo {
 
-  font-size: 30px;
+  font-size: 90%;
 }
 
 
@@ -122,10 +131,13 @@ h2.titulo {
   padding: 20px;
 }
 
+
+
 .bt-contato button {
   color: #fff;
   padding: 8px 20px;
   margin-top: 3%;
+  margin-bottom: 55px;
   font-size: 18px;
   font-weight: 600;
   background-color: #20272F;;
@@ -254,9 +266,14 @@ header a {
   flex-direction: column;
   max-width: 700px;
   margin: 4%;
+  justify-content: center;
+  
+  margin-bottom: 30%;
   z-index: 1;
   
 }
+
+
   
 .jslogo,
 .htmllogo,
@@ -272,6 +289,23 @@ header a {
   height: auto; /* Mantém a proporção */
   margin: 10px;
 }
+
+.sobre {
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.sobre p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
 
 .especialidades {
   padding: 20px;
@@ -300,6 +334,7 @@ header a {
 
 
 
+
 section.especialidades {
   text-align: center;
   padding: 40px 4%;
@@ -311,11 +346,7 @@ section.especialidades {
   margin-bottom: 15px;
 }
 
-.especialidades-box h3 {
-  font-size: 20px;
-  color: #fff;
-  margin-top: 10px;
-}
+
 section.projetos {
   text-align: center;
   padding: 40px 4%;
