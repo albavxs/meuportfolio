@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  AOS.init();
+  AOS.init(); 
 });
 
 let trilho = document.getElementById("trilho");

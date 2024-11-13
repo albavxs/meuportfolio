@@ -177,7 +177,11 @@ h2.titulo {
 /* Ajustes para telas menores */
 @media and screen (max-width: 1200px) {
   
-  
+  [data-aos] {
+     pointer-events: auto !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
   .topo-do-site {
     flex-direction: column;
     align-items: center;
