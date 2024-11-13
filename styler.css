@@ -310,9 +310,10 @@ section.projetos {
 }
 
 .projeto1, .projeto2, .projeto3 {
-  flex: 1 1 calc(35% - 5px); /* Itens ocuparão cerca de 50% da largura, ajustando conforme necessário */
+  flex: 1 1 calc(29% - 3px); /* Itens ocuparão cerca de 50% da largura, ajustando conforme necessário */
   margin: 10px;
   border-radius: 5px;
+ 
   flex-direction: column;
   align-items: center; /* Centraliza os itens */
   text-align: left; /* Alinha o texto à esquerda */
@@ -327,11 +328,19 @@ section.projetos {
   width: 100%;
 }
 
+.projeto2 img {
+  margin-bottom: 10px;
+}
+.projeto1 img {
+  margin-bottom: 20px;
+}
+
+
 
 .projeto1 img, .projeto2 img {
-  width: 100%;
+  width: 80%;
   height: auto;
-  margin-bottom: 20px;
+
   border-radius: 5px;
 }
 
@@ -342,11 +351,12 @@ section.projetos {
   border-radius: 13px;
 
 }
+
 .projeto1:hover, .projeto2:hover, .projeto3:hover {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
-  border-radius: 14px;
+ 
 
 }
 
