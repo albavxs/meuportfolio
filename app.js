@@ -1,7 +1,5 @@
 
-document.addEventListener("DOMContentLoaded", function () {
-  AOS.init(); 
-});
+AOS.init({ disable: "mobile" });
 
 let trilho = document.getElementById("trilho");
 
