@@ -287,6 +287,10 @@ section.especialidades {
   color: #fff;
   margin-top: 10px;
 }
+section.projetos {
+  text-align: center;
+  padding: 40px 4%;
+}
 
 .proj {
   margin-bottom: -2%;
@@ -294,12 +298,24 @@ section.especialidades {
 /* Ajustar as imagens das divs de projetos */
 .interface2 {
   display: flex;
-  max-width: 700px;
+  flex-wrap: wrap; /* Permite quebra de linha */
+  flex-direction: row; /* Coloca os itens em linha */
+  max-width: 700px; /* Limita a largura máxima */
   margin: 4%;
   z-index: 1;
   padding: 20px;
+  align-items: flex-start; /* Alinha os itens no início */
+  justify-content: center; /* Centraliza o conteúdo */
+  gap: 2px; /* Espaçamento entre os itens */
 }
+
 .projeto1, .projeto2, .projeto3 {
+  flex: 1 1 calc(35% - 5px); /* Itens ocuparão cerca de 50% da largura, ajustando conforme necessário */
+  margin: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+  align-items: center; /* Centraliza os itens */
+  text-align: left; /* Alinha o texto à esquerda */
   display: flex;
   justify-content: spacebetwen;
   margin: 15px;
@@ -311,18 +327,29 @@ section.especialidades {
   width: 100%;
 }
 
-.projeto1 img, .projeto2 img, .projeto3 img {
-  width: 110px;
+
+.projeto1 img, .projeto2 img {
+  width: 100%;
   height: auto;
   margin-bottom: 20px;
-  border-radius: 14px;
+  border-radius: 5px;
+}
+
+.projeto3 img {
+ width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 13px;
+
 }
 .projeto1:hover, .projeto2:hover, .projeto3:hover {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
   border-radius: 14px;
+
 }
+
 
 .oculto {
   margin-bottom: 20px;
