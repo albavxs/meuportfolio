@@ -26,8 +26,9 @@ body {
   margin-top: 15%;
   background-color: #20272F;
   border-radius: 150px;
-  margin-left: -3%;
   position: relative;
+   align-items: center;
+  justify-content: center;
   justify-content: center;
   
   cursor: pointer;
@@ -160,8 +161,12 @@ h2.titulo {
 }
 
 .topo-do-site h1 {
-  font-size: 2.5em;
+  font-size: 40px;
 }
+.topo-do-site h5 {
+  font-size: 15px;
+}
+
 
 .topo-do-site h1 span {
   color: #4EC5F1;
@@ -173,20 +178,9 @@ h2.titulo {
   margin: 20px 0;
 }
 
-.img-topo-site img {
-  width: 80%;
-  position relative;
-  margin-left: 80%;
-  height: auto;
-  border-radius: 50px;
-  
- 
-}
 
-.img-topo-site img:hover {
-  cursor: pointer;
- 
-}
+
+
 
 /* Ajustes para telas menores */
 @media and screen (max-width: 1200px) {
@@ -233,7 +227,7 @@ h2.titulo {
     flex-direction:column;
     margin: 0 auto;
   }
-}
+
 
 
 
@@ -265,10 +259,9 @@ header a {
   display: flex;
   flex-direction: column;
   max-width: 700px;
-  margin: 4%;
   justify-content: center;
   
-  margin-bottom: 30%;
+  margin-bottom: 40%;
   z-index: 1;
   
 }
@@ -305,7 +298,17 @@ header a {
   text-align: center;
   padding: 20px;
 }
-
+.img-rodape-site img {
+  width: 37%;
+  position relative;
+   flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  border-radius: 50px;
+  
+ 
+}
 
 .especialidades {
   padding: 20px;
