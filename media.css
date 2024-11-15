@@ -278,10 +278,10 @@ margin-left: -50px;
   
 }
 .minhasespecialidades {
-  display: flex;
+
   max-width: 700px;
   margin: 2%;
-  margin-left: 200px;
+  margin-left: 150px;
   z-index: 1;
   padding: 15px;
   flex-direction: column;
