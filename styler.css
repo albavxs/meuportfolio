@@ -16,7 +16,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s, background 0.3s;
- 
+  overflow-x: hidden;
  
 }
 
@@ -202,8 +202,8 @@ span {
  justify: spacebetwen;
 }
 .topop p{
- font-size: 15px;
- margin-right: -35px; 
+ font-size: 10px;
+ margin-right: 55px; 
 }
 .topop img {
     max-width: 20px;
@@ -216,13 +216,15 @@ span {
 }
 
 .dev {
-  font-size: 60px;
+  font-size: 50px;
   margin-top: -35px;
-  margin-right: 15px;
+  margin-right: 75px;
+
 }
 .dev2 {
    font-size: 60px;
   margin-top: -75px;
+  
 }
 .minhasespecialidades {
   display: flex;
@@ -370,7 +372,7 @@ section.especialidades {
 
 .sobre {
   display: flex;
-  max-width: 500px;
+  max-width: 400px;
   flex-direction: column;
   align-items: center;
   text-align: center;
