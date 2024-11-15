@@ -196,6 +196,9 @@
 
   
 }
+body {
+    overflow-x: hidden;
+}
 
 
  .animated {
