@@ -370,10 +370,15 @@ section.especialidades {
    margin-left: -122px;
 }
 
+body {
+   flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
 .sobre {
   display: flex;
-  max-width: 400px;
+  max-width: 300px;
   flex-direction: column;
   align-items: center;
   text-align: center;
