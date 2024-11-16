@@ -89,18 +89,9 @@ header a {
 /* ESPECIALIDADES */
 
 
-.especialidades {
-  padding: 20px;
-  margin-top: 20px;
-}
 
-.especialidades-box {
-  margin: 20px;
-  display: inline-block;
-  width: 250px;
-  text-align: center;
- 
-}
+
+
 
 
 
@@ -132,8 +123,9 @@ section.especialidades {
 .pylogo,
 .gmlogo {
   cursor: pointer;
-  
-  
+   display: flex;
+  border: 2px solid #eee; /* Cor da borda azul */
+  background-color: hsla(241, 85%, 2%, 0.68); /* Adicione cor se necessário */
   height: auto; /* Mantém a proporção */
   margin: 10px;
   margin-bottom: 25%;
@@ -148,43 +140,117 @@ section.especialidades {
 .gitlogo img,
 .pylogo img,
 .gmlogo img {
-  width: 125px;
+  width: 50px;
 }
 .jslogo {
-  margin-left: -122px;
+
+display: flex; /* Garante que os conteúdos internos sejam flexíveis */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  width: 250px; /* Ajuste conforme necessário */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+
+  padding: 20px; /* Adicione espaçamento interno */
+}
+.jslogo img {
+   position: ;
 }
 .htmllogo {
-  margin-right: -122px;
+display: flex; /* Garante que os conteúdos internos sejam flexíveis */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  width: 250px; /* Ajuste conforme necessário */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+ 
+  padding: 20px; /* Adicione espaçamento interno */
 }
 .csslogo {
-  margin-left: -122px;
+display: flex; /* Garante que os conteúdos internos sejam flexíveis */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  width: 250px; /* Ajuste conforme necessário */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+ 
+  padding: 20px; /* Adicione espaçamento interno */
 }
 
 .nodelogo {
-  margin-right: -122px;
+  display: flex; /* Garante que os conteúdos internos sejam flexíveis */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  width: 250px; /* Ajuste conforme necessário */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+  
+  padding: 20px; /* Adicione espaçamento interno */
 }
 
 .reactlogo {
-  margin-left: -122px;
+  display: flex; /* Garante que os conteúdos internos sejam flexíveis */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  width: 250px; /* Ajuste conforme necessário */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+ 
+  padding: 20px; /* Adicione espaçamento interno */
 }
 
 .pylogo {
-  margin-right: -122px;
+display: flex; /* Garante que os conteúdos internos sejam flexíveis */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  width: 250px; /* Ajuste conforme necessário */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+  
+  padding: 20px; /* Adicione espaçamento interno */
 }
 
 .htmllogo {
-  margin-right: -122px;
+  display: flex; /* Garante que os conteúdos internos sejam flexíveis */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  width: 250px; /* Ajuste conforme necessário */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+  
+  padding: 20px; /* Adicione espaçamento interno */
 }
 
 .gitlogo {
-  margin-left: -122px;
+  display: flex; /* Garante que os conteúdos internos sejam flexíveis */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  width: 250px; /* Ajuste conforme necessário */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+ 
+  padding: 20px; /* Adicione espaçamento interno */
 }
 
 .javalogo {
-  margin-right: -122px;
+ display: flex; /* Garante que os conteúdos internos sejam flexíveis */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  width: 250px; /* Ajuste conforme necessário */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+  
+  padding: 20px; /* Adicione espaçamento interno */
 }
 .gmlogo {
-   margin-left: -122px;
+display: flex; /* Garante que os conteúdos internos sejam flexíveis */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  width: 250px; /* Ajuste conforme necessário */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+  
+  padding: 20px; /* Adicione espaçamento interno */
 }
 
 body {
@@ -237,10 +303,6 @@ body {
 }
 
 
-section.projetos {
-  text-align: center;
-  padding: 40px 4%;
-}
 
 .proj {
   margin-bottom: -2%;
@@ -251,6 +313,7 @@ section.projetos {
   flex-wrap: wrap; /* Permite quebra de linha */
   flex-direction: row; /* Coloca os itens em linha */
   max-width: 700px; /* Limita a largura máxima */
+  
   margin: 4%;
   z-index: 1;
   padding: 20px;
@@ -258,81 +321,6 @@ section.projetos {
   justify-content: center; /* Centraliza o conteúdo */
   gap: 2px; /* Espaçamento entre os itens */
 }
-
-.projeto1, .projeto2, .projeto3 {
-  flex: 1 1 calc(29% - 3px); /* Itens ocuparão cerca de 50% da largura, ajustando conforme necessário */
-  margin: 10px;
-  border-radius: 5px;
- 
-  flex-direction: column;
-  align-items: center; /* Centraliza os itens */
-  text-align: left; /* Alinha o texto à esquerda */
-  display: flex;
-  justify-content: spacebetwen;
-  margin: 15px;
-  border-radius: 5px;
-  flex-direction: column;
-  align-items: center;  /* Centraliza os itens */
-  text-align: left;  /* Alinha o texto à esquerda */
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.projeto2 img {
-  margin-bottom: 10px;
-}
-.projeto1 img {
-  margin-bottom: 20px;
-}
-
-
-
-.projeto1 img, .projeto2 img {
-  width: 80%;
-  height: auto;
-
-  border-radius: 5px;
-}
-
-.projeto3 img {
- width: 80%;
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 13px;
-
-}
-
-.projeto1:hover, .projeto2:hover, .projeto3:hover {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
- 
-
-}
-
-
-.oculto {
-  margin-bottom: 20px;
-  padding: 0 10px;
-  display: none;
-}
-
-.ocultar {
-  display: none;
-}
-
-.expande {
-  
-  display:block;
- 
-}
-
-   .vejabutt {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color:  #20272F;
-   }
 
 
 
