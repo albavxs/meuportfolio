@@ -19,6 +19,13 @@ body {
   overflow-x: hidden;
  
 }
+.titulo {
+
+  font-size: 25px;
+  
+ 
+  margin-top: 5px;
+}
 
 h1,h2,h3,h4,h5,h6,p {
   color: #eee;
@@ -26,15 +33,21 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 
-span {
-  color: #4EC5F1;
-}
 
 
 
 
 .setadown {
-  margin-top: 5px;
+  margin-top: 55px;
+  margin: 0;
+   align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+
+}
+.setadown img{
+  max-width: 35px;
+  
 }
 
 
@@ -129,6 +142,7 @@ section.especialidades {
   height: auto; /* Mantém a proporção */
   margin: 10px;
   margin-bottom: 25%;
+  
 }
 
 .jslogo img,
@@ -280,13 +294,14 @@ body {
 }
 
 .bt-contato button {
-  color: #20272F;
+  color: #eee;
   padding: 8px 10px;
   
   font-size: 12px;
   font-weight: 600;
-  background-color: #eee;;
-  border: 0;
+  border: 2px solid #eee; /* Cor da borda azul */
+  background-color: hsla(241, 85%, 2%, 0.68); /* Adicione cor se necessário */
+
   border-radius: 30px;
   cursor: pointer;
 
@@ -304,24 +319,17 @@ body {
 
 
 
-.proj {
-  margin-bottom: -2%;
-}
-/* Ajustar as imagens das divs de projetos */
-.interface2 {
-  display: flex;
-  flex-wrap: wrap; /* Permite quebra de linha */
-  flex-direction: row; /* Coloca os itens em linha */
-  max-width: 700px; /* Limita a largura máxima */
-  
-  margin: 4%;
-  z-index: 1;
-  padding: 20px;
-  align-items: flex-start; /* Alinha os itens no início */
-  justify-content: center; /* Centraliza o conteúdo */
-  gap: 2px; /* Espaçamento entre os itens */
-}
 
+.projeto1,.projeto2,.projeto3 {
+
+   display: flex;
+  border: 2px solid #eee; /* Cor da borda azul */
+  background-color: hsla(241, 85%, 2%, 0.68); /* Adicione cor se necessário */
+  height: auto; /* Mantém a proporção */
+  margin: 10px;
+  margin-bottom: 25%;
+ 
+}
 
 
 
@@ -330,7 +338,10 @@ body {
   padding: 8px 15px;
   font-size: 60%;
   font-weight: 600;
-  background-color: #20272F;
+   cursor: pointer;
+   display: flex;
+  border: 2px solid #eee; /* Cor da borda azul */
+  background-color: hsla(241, 85%, 2%, 0.68); /* Adicione cor se necessário */
   border: 0;
   border-radius: 30px;
   cursor: pointer;
@@ -340,11 +351,6 @@ body {
 }
 
 
- .gitbut:hover {
-
-  transform: scale(1.05);
-  filter: brightness(1.2);
-}
 
 
 body .vejabutt {
@@ -354,21 +360,11 @@ body .vejabutt {
    
 }
 
- .gitbut {
-  color: #20272F;
-  padding: 8px 15px;
-  font-size: 70%;
-  font-weight: 600;
-  background-color: #eee;
-  border: 0;
-  border-radius: 30px;
-  cursor: pointer;
-  filter: brightness(1);
-  margin-top: 10px;
-  align-self: flex-start;  /* Alinha botões à esquerda */
+
+.vejabutt:hover{
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
-
-
  .gitbut:hover {
 
   transform: scale(1.05);
