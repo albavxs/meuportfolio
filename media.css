@@ -162,7 +162,12 @@ display: flex;
 }
 
 .img-rodape-site {
-
+  
+  align-items: center;
+  
+}
+.img-rodape-site img{
+  border: 4px solid #eee;
   align-items: center;
   
 }
@@ -485,6 +490,11 @@ margin-left: -65px;
   align-items: center;
   
 }
+.img-rodape-site img{
+  border: 4px solid #eee;
+  align-items: center;
+  background-color: #4EC5F1;
+}
 .titulodes {
 font-size: 26px;
 
@@ -532,8 +542,8 @@ font-size: 26px;
 
 .img-rodape-site {
   margin-left: 65px;
-   width: 170px;
-   
+   width: 180px;
+     
   border-radius: 115px;
   align-items: center;
   
