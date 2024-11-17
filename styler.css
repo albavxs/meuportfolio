@@ -27,7 +27,7 @@ body {
   margin-top: 5px;
 }
 
-h1,h2,h3,h4,h5,h6,p {
+h1,h2,h3,h4,h5,h6, {
   color: #eee;
 }
 
@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 .topo-do-site h1 span {
-  color: #4EC5F1;
+
   font-size: 35px;
 }
 
