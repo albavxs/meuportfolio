@@ -6,8 +6,20 @@
   max-width: 700px;
   justify-content: center;
   margin-top: -150px;
-
+   align-items: center;
   z-index: 1;
+  margin: 0;
+}
+.setadown {
+  margin-top: 55px;
+  margin: 0;
+   align-items: center;
+  justify-content: center;
+margin-right: 53px;
+
+}
+.setadown img{
+  max-width: 35px;
   
 }
   
@@ -25,6 +37,7 @@
 .topop p{
  font-size: 102%;
  margin-left: -205px; 
+ 
 }
 .topop img {
     max-width: 25px;
@@ -167,7 +180,7 @@ display: flex;
   
 }
 .img-rodape-site img{
-  border: 4px solid #eee;
+
   align-items: center;
   
 }
@@ -231,7 +244,7 @@ margin-left: 202px;
   flex-direction: column; /* ou 'row', dependendo do layout */
   justify-content: center;
   align-items: center;
-  width: 100%; /* ou ajuste conforme necessário */
+  width: 1350px; /* ou ajuste conforme necessário */
 
   margin: 0 auto; /* Centraliza horizontalmente */
   padding: 20px;
@@ -441,6 +454,19 @@ margin-left: -65px;
 
 
 }
+
+.setadown {
+  margin-top: 55px;
+  margin: 0;
+   align-items: center;
+  justify-content: center;
+
+
+}
+.setadown img{
+  max-width: 35px;
+  
+}
 .dev2 {
    font-size: 60px;
   margin-top: -65px;
@@ -491,7 +517,7 @@ margin-left: -65px;
   
 }
 .img-rodape-site img{
-  border: 4px solid #eee;
+  
   align-items: center;
 
 }
@@ -535,7 +561,7 @@ font-size: 26px;
   width: 250px; /* Ajuste conforme necessário */
   text-align: left; /* Alinha o texto à esquerda */
   border-radius: 30px;
-  margin-left: 55px;
+
   padding: 20px; /* Adicione espaçamento interno */
 }
 

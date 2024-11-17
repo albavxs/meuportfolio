@@ -32,26 +32,6 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 
-
-
-
-
-
-.setadown {
-  margin-top: 55px;
-  margin: 0;
-   align-items: center;
-  justify-content: center;
-  margin-right: 50px;
-
-}
-.setadown img{
-  max-width: 35px;
-  
-}
-
-
-
 .topo-do-site {
 
 }
@@ -65,16 +45,6 @@ h1,h2,h3,h4,h5,h6,p {
   color: #4EC5F1;
   font-size: 35px;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* Cabeçalho */
 header {
