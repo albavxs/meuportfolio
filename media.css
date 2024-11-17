@@ -93,6 +93,7 @@ display: flex;
   width: 100%; /* ou ajuste conforme necessário */
   max-width: 700px; /* Exemplo de limite de largura */
   margin: 0 auto; /* Centraliza horizontalmente */
+  
 }
 
 .projeto1 {
