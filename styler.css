@@ -273,49 +273,10 @@ body {
   text-align: center;
 }
 
-.sobre {
-  display: flex;
-  max-width: 300px;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-.sobre p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  
-}
-.sobre img {
-  width: 120px;
-  border-radius: 55px;
-}
 
-.bt-contato button {
-  color: #eee;
-  padding: 8px 10px;
-  
-  font-size: 12px;
-  font-weight: 600;
-  border: 2px solid #eee; /* Cor da borda azul */
-  background-color: hsla(241, 85%, 2%, 0.68); /* Adicione cor se necessário */
 
-  border-radius: 30px;
-  cursor: pointer;
 
-  filter: brightness(1);
-}
 
-.bt-contato button:hover {
-  transform: scale(1.05);
-  filter: brightness(1.2);
-}
-
-.descript {
-  max-width: 230px;
-}
 
 
 

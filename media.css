@@ -48,7 +48,6 @@
 }
 
 
-
 .minhasespecialidades {
 display: flex;
   flex-wrap: wrap; /* Permite que as divs quebrem de linha */
@@ -147,6 +146,75 @@ display: flex;
     color:  #20272F;
    }
 
+
+.descript {
+   
+  flex-direction: column; /* Alinha os itens verticalmente */
+ 
+  width: 800px; /* Ajuste conforme necessário */
+  height: 300px;
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+  
+  padding: 20px; /* Adicione espaçamento interno */
+  
+  padding: 20px; /* Adicione espaçamento interno */
+}
+
+.img-rodape-site {
+
+  align-items: center;
+  
+}
+.titulodes {
+font-size: 26px;
+
+margin-left: 202px;
+}
+.textodes {
+  font-size: 12px;
+}
+.desdes {
+  font-size: 12px;
+}
+.bt-contato img{
+ max-width: 10px;
+}
+.bt-contato button {
+  color: #eee;
+  padding: 5px 3px;
+  width: 130px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 2px solid #eee; /* Cor da borda azul */
+  background-color: hsla(241, 85%, 2%, 0.68); /* Adicione cor se necessário */
+
+  border-radius: 30px;
+  cursor: pointer;
+
+  filter: brightness(1);
+}
+
+.bt-contato button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.sobre {
+  display: flex;
+  
+  max-width: 800px;
+  width: 900px;
+  flex-direction: flex;
+  align-items: flex;
+  text-align: center;
+  padding: 20px;
+}
+
+.sobre img {
+  width: 170px;
+  border-radius: 115px;
+}
 
 
 /* Contêiner do texto e da imagem */
@@ -377,7 +445,7 @@ margin-left: -65px;
 
 }
 .minhasespecialidades {
-display: flex;
+  display: flex;
   flex-wrap: wrap; /* Permite que as divs quebrem de linha */
   justify-content: flex-start; /* Alinha as divs à esquerda */
   gap: 20px; /* Espaçamento entre as divs */
@@ -398,7 +466,78 @@ display: flex;
 
  
 }
+.descript {
+ display: flex;
+  flex-wrap: wrap; /* Permite que as divs quebrem de linha */
+  justify-content: flex-start; /* Alinha as divs à esquerda */
+  gap: 20px; /* Espaçamento entre as divs */
+   display: flex;
+  flex-direction: row; /* ou 'row', dependendo do layout */
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* ou ajuste conforme necessário */
+  max-width: 600px; /* Exemplo de limite de largura */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
 
+.img-rodape-site {
+
+  align-items: center;
+  
+}
+.titulodes {
+font-size: 26px;
+
+}
+.textodes {
+  font-size: 12px;
+}
+.desdes {
+  font-size: 12px;
+}
+.bt-contato img{
+ max-width: 10px;
+}
+.bt-contato button {
+  color: #eee;
+  padding: 5px 3px;
+  width: 130px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 2px solid #eee; /* Cor da borda azul */
+  background-color: hsla(241, 85%, 2%, 0.68); /* Adicione cor se necessário */
+
+  border-radius: 30px;
+  cursor: pointer;
+
+  filter: brightness(1);
+}
+
+.bt-contato button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.sobre {
+  display: flex; /* Garante que os conteúdos internos sejam flexíveis */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+  width: 250px; /* Ajuste conforme necessário */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-radius: 30px;
+  margin-left: 55px;
+  padding: 20px; /* Adicione espaçamento interno */
+}
+
+
+.img-rodape-site {
+  margin-left: 65px;
+   width: 170px;
+   
+  border-radius: 115px;
+  align-items: center;
+  
+}
 
 /* Contêiner do texto e da imagem */
 .topo-do-site {
@@ -477,7 +616,10 @@ display: flex;
   
   padding: 20px; /* Adicione espaçamento interno */
 }
-
+.sobre img {
+  width: 100px;
+  border-radius: 115px;
+}
 
 
 .oculto {
