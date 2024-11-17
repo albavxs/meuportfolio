@@ -411,12 +411,11 @@ html, body {
 
 
 
-
   
 
   .interface2 {
    display: column;
-  
+  color: #eee;;
   
   gap: 20px; /* Espaçamento entre as divs */
  
@@ -429,7 +428,7 @@ html, body {
   }
   
   .topo-site {
- 
+ color: #eee;;
   margin-bottom: -25px;
 }
 .topop {
@@ -461,6 +460,9 @@ margin-left: -65px;
 
 
 }
+.titulo {
+  color: #eee;;
+}
 
 .setadown {
   margin-top: 55px;
@@ -483,6 +485,7 @@ margin-left: -65px;
 
 }
 .minhasespecialidades {
+  color: #eee;;
   display: flex;
   flex-wrap: wrap; /* Permite que as divs quebrem de linha */
   justify-content: flex-start; /* Alinha as divs à esquerda */
@@ -516,6 +519,7 @@ margin-left: -65px;
   width: 100%; /* ou ajuste conforme necessário */
   max-width: 600px; /* Exemplo de limite de largura */
   margin: 0 auto; /* Centraliza horizontalmente */
+  color: #eee;;
 }
 
 .img-rodape-site {
@@ -605,7 +609,7 @@ font-size: 26px;
 .interface2 {
  display: flex;
   flex-wrap: wrap; /* Permite que as divs quebrem de linha */
- 
+ color: #eee;;
   gap: 20px; /* Espaçamento entre as divs */
    display: flex;
   flex-direction: row; /* ou 'row', dependendo do layout */
