@@ -26,6 +26,16 @@ body {
  
   margin-top: 5px;
 }
+.titulo2 {
+  .titulo {
+
+  font-size: 25px;
+  
+  color: #eee;
+ 
+  margin-top: 5px;
+}
+}
 
 h1,h2,h3,h4,h5,h6, {
   color: #eee;
@@ -267,13 +277,14 @@ body {
  .gitbut{
   color: #eee;
   padding: 8px 15px;
+  border: 2px solid #eee; /* Cor da borda azul */
   font-size: 60%;
   font-weight: 600;
    cursor: pointer;
    display: flex;
   border: 2px solid #eee; /* Cor da borda azul */
   background-color: hsla(241, 85%, 2%, 0.68); /* Adicione cor se necessário */
-  border: 0;
+  
   border-radius: 30px;
   cursor: pointer;
   filter: brightness(1);
