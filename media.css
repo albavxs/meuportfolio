@@ -41,10 +41,10 @@
 }
 @keyframes typing {
   0% { width: 0; }
-  40% { width: 8ch; }
-  60% { width: 8ch; }
-  80% { width: 8ch; }
-  100% { width: 8ch; }
+  40% { width: 7ch; }
+  60% { width: 7ch; }
+  80% { width: 7ch; }
+  100% { width: 7ch; }
  
 }
 
