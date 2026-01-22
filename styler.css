@@ -88,13 +88,14 @@ h1, h2, h3 {
 
 .dev {
   font-size: clamp(40px, 8vw, 80px);
-  margin-bottom: 10px;
+  margin-bottom: -15px; /* Reduzido para aproximar os textos */
   color: #ffffff;
 }
 
 .dev2 {
   font-size: clamp(40px, 8vw, 80px);
   color: var(--ios-text-secondary);
+  margin-top: -15px; /* Adicionado para aproximar ainda mais */
 }
 
 .dev2 span {
@@ -151,14 +152,20 @@ h1, h2, h3 {
 /* Projects Grid */
 .interface2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* Forçado para 2 colunas no desktop */
   gap: 25px;
   width: 90%;
-  max-width: 1200px;
+  max-width: 1000px;
   padding: 20px;
 }
 
-.projeto1, .projeto2, .projeto3 {
+@media (max-width: 768px) {
+  .interface2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projeto1, .projeto2, .projeto3, .projeto4 {
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -284,6 +291,64 @@ h1, h2, h3 {
 
 .dock-item:hover::after {
   opacity: 1;
+}
+
+/* Experience Timeline */
+.experience-timeline {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  position: relative;
+  padding-left: 30px;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--ios-border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  top: 25px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ios-accent);
+  border: 3px solid var(--ios-bg);
+  z-index: 1;
+}
+
+.timeline-date {
+  font-size: 12px;
+  color: var(--ios-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.timeline-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.timeline-company {
+  font-size: 14px;
+  color: var(--ios-text-secondary);
+  margin-bottom: 10px;
 }
 
 /* Utilities */

@@ -33,6 +33,7 @@ function initPortfolio() {
   createToggleHandler("toggleButton", "texto1");
   createToggleHandler("toggleButton2", "texto2");
   createToggleHandler("toggleButton3", "texto3");
+  createToggleHandler("toggleButton4", "texto4");
 
   // iOS Dock Hover Effect (Magnification)
   const dockItems = document.querySelectorAll('.dock-item');
