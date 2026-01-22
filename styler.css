@@ -14,16 +14,24 @@
   -webkit-font-smoothing: antialiased;
 }
 
-body {
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  scroll-behavior: smooth;
   background-color: var(--ios-bg);
+}
+
+body {
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
   color: var(--ios-text);
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 /* Glassmorphism Card Base */
@@ -34,7 +42,6 @@ body {
   border: 1px solid var(--ios-border);
   border-radius: 20px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  /* Fallback para navegadores que não suportam backdrop-filter */
   background: rgba(20, 20, 30, 0.8);
 }
 
@@ -72,6 +79,7 @@ h1, h2, h3 {
 /* Hero Section */
 .topo-do-site {
   height: 100vh;
+  height: 100dvh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -84,18 +92,20 @@ h1, h2, h3 {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  position: relative;
+  z-index: 1;
 }
 
 .dev {
   font-size: clamp(40px, 8vw, 80px);
-  margin-bottom: -15px; /* Reduzido para aproximar os textos */
+  margin-bottom: -15px;
   color: #ffffff;
 }
 
 .dev2 {
   font-size: clamp(40px, 8vw, 80px);
   color: var(--ios-text-secondary);
-  margin-top: -15px; /* Adicionado para aproximar ainda mais */
+  margin-top: -15px;
 }
 
 .dev2 span {
@@ -152,7 +162,7 @@ h1, h2, h3 {
 /* Projects Grid */
 .interface2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Forçado para 2 colunas no desktop */
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   width: 90%;
   max-width: 1000px;
@@ -172,7 +182,7 @@ h1, h2, h3 {
   gap: 15px;
 }
 
-.projeto1 p:first-child, .projeto2 p:first-child, .projeto3 p:first-child {
+.projeto1 p:first-child, .projeto2 p:first-child, .projeto3 p:first-child, .projeto4 p:first-child {
   font-size: 20px;
   font-weight: 600;
   color: #ffffff;

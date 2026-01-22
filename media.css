@@ -10,6 +10,12 @@
 }
 
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100vw;
+    position: relative;
+  }
+
   .sobre {
     flex-direction: column;
     text-align: center;
@@ -42,6 +48,16 @@
   .dock-item:hover {
     transform: scale(1.1) translateY(-5px) !important;
   }
+
+  .topo-do-site {
+    background-attachment: scroll !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    width: 100vw !important;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 480px) {
@@ -65,13 +81,4 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-@media (max-width: 768px) {
-  .topo-do-site {
-    background-attachment: scroll; /* Melhora performance e evita bugs no mobile */
-    height: 100dvh; /* Dynamic viewport height para mobile */
-    background-size: 200% 100%; /* Aumenta um pouco a escala para a animação preencher melhor */
-    background-position: center center;
-  }
 }
