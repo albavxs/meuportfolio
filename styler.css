@@ -1,9 +1,9 @@
 :root {
-  --ios-bg: hsl(241, 68%, 3%);
+  --ios-bg: #05050a;
   --ios-glass: rgba(255, 255, 255, 0.05);
   --ios-border: rgba(255, 255, 255, 0.1);
   --ios-text: #ffffff;
-  --ios-text-secondary: rgba(255, 255, 255, 0.6);
+  --ios-text-secondary: rgba(255, 255, 255, 0.7);
   --ios-accent: #007AFF;
 }
 
@@ -34,6 +34,14 @@ body {
   border: 1px solid var(--ios-border);
   border-radius: 20px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Fallback para navegadores que não suportam backdrop-filter */
+  background: rgba(20, 20, 30, 0.8);
+}
+
+@supports (backdrop-filter: blur(20px)) {
+  .glass-card {
+    background: var(--ios-glass);
+  }
 }
 
 .glass-card:hover {
@@ -50,40 +58,38 @@ body {
 h1, h2, h3 {
   font-weight: 700;
   letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 .titulo {
   font-size: 32px;
   margin: 60px 0 30px;
   font-weight: 700;
-  background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.7) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Header & Navigation */
-header {
-  width: 100%;
-  padding: 20px 4%;
-  position: fixed;
-  top: 0;
-  z-index: 100;
+  color: #ffffff;
+  text-align: center;
 }
 
 /* Hero Section */
 .topo-do-site {
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px;
+  background-image: url("background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .dev {
   font-size: clamp(40px, 8vw, 80px);
-  margin-bottom: -10px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .dev2 {
@@ -102,8 +108,9 @@ header {
   animation: bounce 2s infinite;
 }
 
-.setadown:hover {
-  transform: scale(1.2);
+.setadown img {
+  width: 50px;
+  height: auto;
 }
 
 @keyframes bounce {
@@ -123,7 +130,6 @@ header {
 }
 
 .jslogo, .htmllogo, .csslogo, .reactlogo, .nodelogo, .javalogo, .gitlogo, .pylogo, .gmlogo {
-  composes: glass-card;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -153,7 +159,6 @@ header {
 }
 
 .projeto1, .projeto2, .projeto3 {
-  composes: glass-card;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -163,6 +168,7 @@ header {
 .projeto1 p:first-child, .projeto2 p:first-child, .projeto3 p:first-child {
   font-size: 20px;
   font-weight: 600;
+  color: #ffffff;
 }
 
 /* Buttons */
@@ -177,6 +183,9 @@ header {
   cursor: pointer;
   transition: all 0.2s;
   margin-top: auto;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
 }
 
 .gitbut:hover {
@@ -201,7 +210,6 @@ header {
 
 /* About Section */
 .sobre {
-  composes: glass-card;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -217,7 +225,6 @@ header {
   height: 180px;
   border-radius: 40px;
   object-fit: cover;
-  border: 2px solid var(--ios-border);
 }
 
 /* iOS Dock Navigation */
@@ -226,7 +233,7 @@ header {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(20, 20, 30, 0.8);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   padding: 10px;
