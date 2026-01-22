@@ -1,314 +1,298 @@
-/* ESTILO GERAL */http://127.0.0.1:3000/index.html
+:root {
+  --ios-bg: hsl(241, 68%, 3%);
+  --ios-glass: rgba(255, 255, 255, 0.05);
+  --ios-border: rgba(255, 255, 255, 0.1);
+  --ios-text: #ffffff;
+  --ios-text-secondary: rgba(255, 255, 255, 0.6);
+  --ios-accent: #007AFF;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-   background-color: hsl(241, 68%, 3%); /* Gradiente para o tema escuro */
-  min-height: 100vh;  /* Use min-height para garantir que o gradiente cubra toda a altura */
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
+  background-color: var(--ios-bg);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  color: var(--ios-text);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s, background 0.3s;
   overflow-x: hidden;
- 
+  line-height: 1.5;
 }
+
+/* Glassmorphism Card Base */
+.glass-card {
+  background: var(--ios-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--ios-border);
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.glass-card:active {
+  transform: scale(0.98);
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 .titulo {
-
-  font-size: 25px;
-  
- 
-  margin-top: 5px;
-}
-.titulo2 {
-  .titulo {
-
-  font-size: 25px;
-  
-  color: #eee;
- 
-  margin-top: 5px;
-}
+  font-size: 32px;
+  margin: 60px 0 30px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-h1,h2,h3,h4,h5,h6, {
-  color: #eee;
-}
-
-
-.topo-do-site {
-
-}
-
-.topo-do-site h5 {
-  font-size: 16px;
-}
-
-
-.topo-do-site h1 span {
-
-  font-size: 35px;
-}
-
-/* Cabeçalho */
+/* Header & Navigation */
 header {
   width: 100%;
   padding: 20px 4%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+/* Hero Section */
+.topo-do-site {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  
-}
-
-header a {
-  color: #fff;
-}
-
-@keyframes flutuar {
-  0% {
-    top: 0;
-  }
-
-  100% {
-    top: 10px;
-  }
-}
-
-/* ESPECIALIDADES */
-
-
-
-
-
-
-
-
-
-
-
-
-section.especialidades {
-  text-align: center;
-  max-width: 50%;
-  padding: 40px 4%;
-}
-
-.especialidades-box i {
-  font-size: 50px;
-  color: #a57bff;
-  margin-bottom: 15px;
-}
-
-
-  
-.jslogo,
-.htmllogo,
-.csslogo,
-.reactlogo,
-.nodelogo,
-.javalogo,
-.gitlogo,
-.pylogo,
-.gmlogo {
-  cursor: pointer;
-   display: flex;
-  border: 2px solid #eee; /* Cor da borda azul */
-  background-color: hsla(241, 85%, 2%, 0.68); /* Adicione cor se necessário */
-  height: auto; /* Mantém a proporção */
-  margin: 10px;
-  margin-bottom: 25%;
-  
-}
-
-.jslogo img,
-.htmllogo img,
-.csslogo img,
-.reactlogo img,
-.nodelogo img,
-.javalogo img,
-.gitlogo img,
-.pylogo img,
-.gmlogo img {
-  width: 50px;
-}
-.jslogo {
-
-display: flex; /* Garante que os conteúdos internos sejam flexíveis */
-  flex-direction: column; /* Alinha os itens verticalmente */
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  width: 250px; /* Ajuste conforme necessário */
-  text-align: left; /* Alinha o texto à esquerda */
-  border-radius: 30px;
-
-  padding: 20px; /* Adicione espaçamento interno */
-}
-.jslogo img {
-   position: ;
-}
-.htmllogo {
-display: flex; /* Garante que os conteúdos internos sejam flexíveis */
-  flex-direction: column; /* Alinha os itens verticalmente */
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  width: 250px; /* Ajuste conforme necessário */
-  text-align: left; /* Alinha o texto à esquerda */
-  border-radius: 30px;
- 
-  padding: 20px; /* Adicione espaçamento interno */
-}
-.csslogo {
-display: flex; /* Garante que os conteúdos internos sejam flexíveis */
-  flex-direction: column; /* Alinha os itens verticalmente */
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  width: 250px; /* Ajuste conforme necessário */
-  text-align: left; /* Alinha o texto à esquerda */
-  border-radius: 30px;
- 
-  padding: 20px; /* Adicione espaçamento interno */
-}
-
-.nodelogo {
-  display: flex; /* Garante que os conteúdos internos sejam flexíveis */
-  flex-direction: column; /* Alinha os itens verticalmente */
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  width: 250px; /* Ajuste conforme necessário */
-  text-align: left; /* Alinha o texto à esquerda */
-  border-radius: 30px;
-  
-  padding: 20px; /* Adicione espaçamento interno */
-}
-
-.reactlogo {
-  display: flex; /* Garante que os conteúdos internos sejam flexíveis */
-  flex-direction: column; /* Alinha os itens verticalmente */
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  width: 250px; /* Ajuste conforme necessário */
-  text-align: left; /* Alinha o texto à esquerda */
-  border-radius: 30px;
- 
-  padding: 20px; /* Adicione espaçamento interno */
-}
-
-.pylogo {
-display: flex; /* Garante que os conteúdos internos sejam flexíveis */
-  flex-direction: column; /* Alinha os itens verticalmente */
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  width: 250px; /* Ajuste conforme necessário */
-  text-align: left; /* Alinha o texto à esquerda */
-  border-radius: 30px;
-  
-  padding: 20px; /* Adicione espaçamento interno */
-}
-
-.htmllogo {
-  display: flex; /* Garante que os conteúdos internos sejam flexíveis */
-  flex-direction: column; /* Alinha os itens verticalmente */
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  width: 250px; /* Ajuste conforme necessário */
-  text-align: left; /* Alinha o texto à esquerda */
-  border-radius: 30px;
-  
-  padding: 20px; /* Adicione espaçamento interno */
-}
-
-.gitlogo {
-  display: flex; /* Garante que os conteúdos internos sejam flexíveis */
-  flex-direction: column; /* Alinha os itens verticalmente */
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  width: 250px; /* Ajuste conforme necessário */
-  text-align: left; /* Alinha o texto à esquerda */
-  border-radius: 30px;
- 
-  padding: 20px; /* Adicione espaçamento interno */
-}
-
-.javalogo {
- display: flex; /* Garante que os conteúdos internos sejam flexíveis */
-  flex-direction: column; /* Alinha os itens verticalmente */
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  width: 250px; /* Ajuste conforme necessário */
-  text-align: left; /* Alinha o texto à esquerda */
-  border-radius: 30px;
-  
-  padding: 20px; /* Adicione espaçamento interno */
-}
-.gmlogo {
-display: flex; /* Garante que os conteúdos internos sejam flexíveis */
-  flex-direction: column; /* Alinha os itens verticalmente */
-  align-items: flex-start; /* Alinha o conteúdo à esquerda */
-  width: 250px; /* Ajuste conforme necessário */
-  text-align: left; /* Alinha o texto à esquerda */
-  border-radius: 30px;
-  
-  padding: 20px; /* Adicione espaçamento interno */
-}
-
-body {
-   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
-
-
-
-
-
-
-
-
-.projeto1,.projeto2,.projeto3 {
-
-   display: flex;
-  border: 2px solid #eee; /* Cor da borda azul */
-  background-color: hsla(241, 85%, 2%, 0.68); /* Adicione cor se necessário */
-  height: auto; /* Mantém a proporção */
-  margin: 10px;
-  margin-bottom: 25%;
- 
+.dev {
+  font-size: clamp(40px, 8vw, 80px);
+  margin-bottom: -10px;
 }
 
+.dev2 {
+  font-size: clamp(40px, 8vw, 80px);
+  color: var(--ios-text-secondary);
+}
 
+.dev2 span {
+  color: var(--ios-accent);
+}
 
- .gitbut{
-  color: #eee;
-  padding: 8px 15px;
-  border: 2px solid #eee; /* Cor da borda azul */
-  font-size: 60%;
-  font-weight: 600;
-   cursor: pointer;
-   display: flex;
-  border: 2px solid #eee; /* Cor da borda azul */
-  background-color: hsla(241, 85%, 2%, 0.68); /* Adicione cor se necessário */
-  
-  border-radius: 30px;
+.setadown {
+  margin-top: 50px;
   cursor: pointer;
-  filter: brightness(1);
+  transition: transform 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.setadown:hover {
+  transform: scale(1.2);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+}
+
+/* Skills Grid */
+.minhasespecialidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.jslogo, .htmllogo, .csslogo, .reactlogo, .nodelogo, .javalogo, .gitlogo, .pylogo, .gmlogo {
+  composes: glass-card;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.textoespec p {
+  font-size: 14px;
+  color: var(--ios-text-secondary);
+}
+
+.minhasespecialidades img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Projects Grid */
+.interface2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.projeto1, .projeto2, .projeto3 {
+  composes: glass-card;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.projeto1 p:first-child, .projeto2 p:first-child, .projeto3 p:first-child {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.gitbut {
+  background: var(--ios-accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: auto;
+}
+
+.gitbut:hover {
+  filter: brightness(1.1);
+  transform: scale(1.02);
+}
+
+.vejabutt {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.vejabutt:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* About Section */
+.sobre {
+  composes: glass-card;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  max-width: 800px;
+  width: 90%;
+  margin: 60px 0 100px;
+  padding: 40px;
+}
+
+.sobre img {
+  width: 180px;
+  height: 180px;
+  border-radius: 40px;
+  object-fit: cover;
+  border: 2px solid var(--ios-border);
+}
+
+/* iOS Dock Navigation */
+.ios-dock {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 10px;
+  border-radius: 24px;
+  border: 1px solid var(--ios-border);
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.dock-item {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.dock-item img {
+  width: 30px;
+  height: 30px;
+}
+
+.dock-item:hover {
+  transform: scale(1.3) translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dock-item::after {
+  content: attr(data-label);
+  position: absolute;
+  top: -40px;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.dock-item:hover::after {
+  opacity: 1;
+}
+
+/* Utilities */
+.oculto {
+  display: none;
+  color: var(--ios-text-secondary);
+  font-size: 14px;
   margin-top: 10px;
-  align-self: flex-start;  /* Alinha botões à esquerda */
 }
 
-
-
-
-body .vejabutt {
-   color: #eee;
-   border: 0;
-   background: none;
-   
+.expande {
+  display: block;
+  animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-.vejabutt:hover{
-  transform: scale(1.05);
-  filter: brightness(1.2);
-}
- .gitbut:hover {
-
-  transform: scale(1.05);
-  filter: brightness(1.2);
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

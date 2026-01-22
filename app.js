@@ -1,68 +1,76 @@
-
-AOS.init({ disable: "mobile" });
-
-
-document.getElementById("toggleButton").addEventListener("click", function () {
-  const texto1 = document.getElementById("texto1");
-
-  const botao = this;
-
-
-
-  texto1.classList.toggle("expande");
-
-  if (texto1.classList.contains("expande")) {
-    //se veja mais for clicado o botao agora passa ser de ocultar
-    botao.innerText = "Ocultar";
-
-   
-  } else {
-    botao.innerText = "Veja Mais";
-    // Mostra os outros projetos novamente
- 
-  }
+// Initialize AOS with smoother settings
+AOS.init({
+  duration: 800,
+  easing: 'ease-out-cubic',
+  once: true,
+  disable: "mobile"
 });
 
-document.getElementById("toggleButton2").addEventListener("click", function () {
-  const texto2 = document.getElementById("texto2");
+// Toggle Handler for Project Details
+function createToggleHandler(buttonId, textId) {
+  const button = document.getElementById(buttonId);
+  const text = document.getElementById(textId);
 
-  const botao = this;
+  if (!button || !text) return;
 
-  
+  button.addEventListener("click", () => {
+    const isExpanding = !text.classList.contains("expande");
+    text.classList.toggle("expande");
+    button.innerText = isExpanding ? "Hide" : "Details";
+    
+    // Add a subtle scale effect on click
+    button.style.transform = "scale(0.95)";
+    setTimeout(() => button.style.transform = "", 100);
+  });
+}
 
-  texto2.classList.toggle("expande");
+createToggleHandler("toggleButton", "texto1");
+createToggleHandler("toggleButton2", "texto2");
+createToggleHandler("toggleButton3", "texto3");
 
-  if (texto2.classList.contains("expande")) {
-    //se veja mais for clicado o botao agora passa ser de ocultar
-    botao.innerText = "Ocultar";
+// iOS Dock Hover Effect (Magnification)
+const dockItems = document.querySelectorAll('.dock-item');
+const dock = document.querySelector('.ios-dock');
 
-   
-  } else {
-    botao.innerText = "Veja Mais";
+if (dock) {
+  dock.addEventListener('mousemove', (e) => {
+    dockItems.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const distance = Math.abs(e.clientX - centerX);
+      
+      // Magnification logic based on distance from cursor
+      const scale = Math.max(1, 1.5 - distance / 150);
+      item.style.transform = `scale(${scale}) translateY(${(scale - 1) * -10}px)`;
+    });
+  });
 
+  dock.addEventListener('mouseleave', () => {
+    dockItems.forEach(item => {
+      item.style.transform = '';
+    });
+  });
+}
 
-  }
+// Smooth Scroll for anchor links (if any)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
 });
 
-document.getElementById("toggleButton3").addEventListener("click", function () {
-  const texto3 = document.getElementById("texto3");
+// Scroll to Skills Section when clicking the arrow
+const scrollTrigger = document.getElementById('scroll-trigger');
+const skillsSection = document.getElementById('skills-section');
 
-  const botao = this;
-
-  
-
-  texto3.classList.toggle("expande");
-
-  if (texto3.classList.contains("expande")) {
-    //se veja mais for clicado o botao agora passa ser de ocultar
-    botao.innerText = "Ocultar";
-
-  
-
-  } else {
-    botao.innerText = "Veja Mais";
-
-    // Mostra os outros projetos novamente
-   
-  }
-});
+if (scrollTrigger && skillsSection) {
+  scrollTrigger.addEventListener('click', () => {
+    skillsSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+}
