@@ -66,3 +66,12 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+@media (max-width: 768px) {
+  .topo-do-site {
+    background-attachment: scroll; /* Melhora performance e evita bugs no mobile */
+    height: 100dvh; /* Dynamic viewport height para mobile */
+    background-size: 200% 100%; /* Aumenta um pouco a escala para a animação preencher melhor */
+    background-position: center center;
+  }
+}
