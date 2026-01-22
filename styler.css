@@ -97,6 +97,7 @@ h1, h2, h3 {
 }
 
 .dev {
+  margin-top: -15px;
   font-size: clamp(40px, 8vw, 80px);
   margin-bottom: -15px;
   color: #ffffff;
@@ -106,6 +107,26 @@ h1, h2, h3 {
   font-size: clamp(40px, 8vw, 80px);
   color: var(--ios-text-secondary);
   margin-top: -15px;
+  line-height: 1;
+  border-right: 2px solid var(--ios-text-secondary);
+  width: 9ch;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: blinkMarker 0.5s infinite, typing 5s infinite steps(9) forwards;
+  
+}
+@keyframes typing {
+  0% { width: 0; }
+  40% { width: 9ch; }
+  60% { width: 9ch; }
+  80% { width: 9ch; }
+  100% { width: 9ch; }
+ 
+}
+
+@keyframes blinkMarker {
+  0%, 50% { border-color: var(--ios-text-secondary); }
+  51%, 100% { border-color: transparent; }
 }
 
 .dev2 span {
