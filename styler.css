@@ -303,3 +303,14 @@ h1, h2, h3 {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Fallback para garantir que elementos fiquem visíveis se o AOS falhar ou demorar */
+[data-aos] {
+  pointer-events: auto !important;
+}
+
+/* Se o JavaScript estiver desativado ou o AOS não carregar, mostra os elementos */
+.no-js [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
