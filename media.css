@@ -15,6 +15,40 @@
     width: 100vw;
     position: relative;
   }
+  
+  .dev2 {
+    border-right: none;
+
+    /* nova técnica no mobile */
+    position: relative;
+    clip-path: inset(0 100% 0 0);
+    animation: typingMobile 5s steps(9, end) infinite;
+  }
+
+  .dev2::after {
+    content: "";
+    position: absolute;
+    top: 0.05em;
+    right: -0.15em;
+    width: 2px;
+    height: 0.95em;
+    background: var(--ios-text-secondary);
+    animation: blinkOpacity 0.5s steps(1) infinite;
+  }
+  @keyframes typingMobile {
+  0%   { clip-path: inset(0 100% 0 0); }
+  40%  { clip-path: inset(0 0%   0 0); }
+  80%  { clip-path: inset(0 0%   0 0); }
+  100% { clip-path: inset(0 100% 0 0); }
+}
+
+@keyframes blinkOpacity {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+}
+
 
   .sobre {
     flex-direction: column;
